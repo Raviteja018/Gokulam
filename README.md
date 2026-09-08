@@ -81,3 +81,10 @@ npm run preview
 - **Address**: 240, Kukatpally Housing Board Colony, K P H B Phase 6, Kukatpally, Hyderabad, Telangana 500085
 - **Hours**: 12:00 PM – 11:00 PM (Open Daily)
 - **Google Maps**: [CAFE GOKULAM](https://maps.app.goo.gl/354fR2Ww9nF9sX856)
+
+---
+
+## 🛵 Order Online (Doorstep Delivery)
+
+- **Swiggy**: [Order Gokulam on Swiggy](https://www.swiggy.com/city/hyderabad/gokulam-kukatpally-rest1146823?is_retargeting=true&media_source=GooglePlaceOrder)
+- **Zomato**: [Order Gokulam on Zomato](https://www.zomato.com/hyderabad/gokulam-rajendra-nagar/order)

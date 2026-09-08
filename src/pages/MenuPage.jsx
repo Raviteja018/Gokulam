@@ -60,6 +60,29 @@ export default function MenuPage({ onOpenReservation }) {
             </div>
           </div>
 
+          {/* Quick Online Delivery Action Pills */}
+          <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-3 p-2 rounded-2xl bg-[#161917]/90 border border-gold/25 shadow-lg">
+            <span className="text-xs font-mono text-[#A39E93] px-2">Order Online:</span>
+            <a
+              href="https://www.swiggy.com/city/hyderabad/gokulam-kukatpally-rest1146823?is_retargeting=true&media_source=GooglePlaceOrder"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FC8019]/15 hover:bg-[#FC8019] text-white border border-[#FC8019]/50 text-xs font-mono font-semibold transition-all duration-300"
+            >
+              <span className="w-2 h-2 rounded-full bg-[#FC8019] border border-white" />
+              <span>Order on Swiggy</span>
+            </a>
+            <a
+              href="https://www.zomato.com/hyderabad/gokulam-rajendra-nagar/order"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E23744]/15 hover:bg-[#E23744] text-white border border-[#E23744]/50 text-xs font-mono font-semibold transition-all duration-300"
+            >
+              <span className="w-2 h-2 rounded-full bg-[#E23744] border border-white" />
+              <span>Order on Zomato</span>
+            </a>
+          </div>
+
         </div>
       </section>
 
@@ -70,33 +93,55 @@ export default function MenuPage({ onOpenReservation }) {
         />
       </main>
 
-      {/* Bottom Dining Invitation Banner */}
-      <section className="mt-16 max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="p-8 rounded-3xl bg-gradient-to-r from-[#161917] via-[#1A1E1C] to-[#161917] border border-gold/30 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+      {/* Bottom Dining & Delivery Invitation Banner */}
+      <section className="mt-16 max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="p-8 rounded-3xl bg-gradient-to-r from-[#161917] via-[#1A1E1C] to-[#161917] border border-gold/30 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
           <div>
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-cream mb-1">
-              Ready to Taste the Tradition?
+              Dine In the Courtyard or Order to Your Doorstep
             </h3>
             <p className="text-xs sm:text-sm text-[#A39E93]">
-              Join us in our open-air courtyard in KPHB Phase 6 or reserve a family table in advance.
+              Experience open-air dining in KPHB Phase 6, or enjoy fast home delivery via Swiggy & Zomato.
             </p>
           </div>
 
-          <div className="flex items-center gap-3 flex-shrink-0">
+          <div className="flex flex-wrap items-center justify-center gap-3 flex-shrink-0">
+            {/* Swiggy */}
+            <a
+              href="https://www.swiggy.com/city/hyderabad/gokulam-kukatpally-rest1146823?is_retargeting=true&media_source=GooglePlaceOrder"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-3 rounded-full bg-[#FC8019]/20 hover:bg-[#FC8019] border border-[#FC8019]/60 text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-sm"
+            >
+              Swiggy
+            </a>
+
+            {/* Zomato */}
+            <a
+              href="https://www.zomato.com/hyderabad/gokulam-rajendra-nagar/order"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-3 rounded-full bg-[#E23744]/20 hover:bg-[#E23744] border border-[#E23744]/60 text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-sm"
+            >
+              Zomato
+            </a>
+
+            {/* Reserve Table */}
             <button
               onClick={onOpenReservation}
-              className="px-6 py-3.5 rounded-full bg-gradient-to-r from-[#FFF4D0] via-[#D4AF37] to-[#B68C26] text-[#0E100F] font-bold text-xs font-mono uppercase tracking-wider hover:brightness-110 shadow-gold-sm"
+              className="px-5 py-3 rounded-full bg-gradient-to-r from-[#FFF4D0] via-[#D4AF37] to-[#B68C26] text-[#0E100F] font-bold text-xs font-mono uppercase tracking-wider hover:brightness-110 shadow-gold-sm"
             >
-              Reserve a Table
+              Reserve Table
             </button>
 
+            {/* Get Directions */}
             <a
               href="https://www.google.com/maps/place/CAFE+GOKULAM/@17.4882145,78.3830695,19z/data=!4m6!3m5!1s0x3bcb9331aa997777:0xff4a908c3fdc9ca6!8m2!3d17.4882145!4d78.3830695!16s%2Fg%2F11w7tq9_04"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-3.5 rounded-full bg-[#0E100F] hover:bg-[#222824] border border-gold/30 text-cream font-mono text-xs uppercase tracking-wider transition-colors"
+              className="px-4 py-3 rounded-full bg-[#0E100F] hover:bg-[#222824] border border-gold/30 text-cream font-mono text-xs uppercase tracking-wider transition-colors"
             >
-              Get Directions
+              Directions
             </a>
           </div>
         </div>

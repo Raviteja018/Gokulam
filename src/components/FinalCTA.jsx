@@ -46,6 +46,36 @@ export default function FinalCTA() {
           The table is set. The courtyard lights are on. Join us tonight for an unhurried, delicious Indian feast with the ones who matter most.
         </p>
 
+        {/* Action Buttons: Dine In & Delivery */}
+        <div className="flex flex-wrap items-center justify-center gap-4 w-full">
+          <Link
+            to="/menu"
+            className="px-8 py-4 rounded-full text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#0E100F] bg-gradient-to-r from-[#FFF4D0] via-[#D4AF37] to-[#B68C26] hover:brightness-110 shadow-gold-md hover:shadow-gold-lg transition-all duration-300 transform hover:-translate-y-0.5"
+          >
+            Explore Menu
+          </Link>
+
+          <a
+            href="https://www.swiggy.com/city/hyderabad/gokulam-kukatpally-rest1146823?is_retargeting=true&media_source=GooglePlaceOrder"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-4 rounded-full text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-white bg-[#FC8019]/20 hover:bg-[#FC8019] border border-[#FC8019]/60 transition-all duration-300 shadow-sm transform hover:-translate-y-0.5"
+          >
+            <span className="w-2.5 h-2.5 rounded-full bg-[#FC8019] border border-white" />
+            <span>Order on Swiggy</span>
+          </a>
+
+          <a
+            href="https://www.zomato.com/hyderabad/gokulam-rajendra-nagar/order"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-4 rounded-full text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-white bg-[#E23744]/20 hover:bg-[#E23744] border border-[#E23744]/60 transition-all duration-300 shadow-sm transform hover:-translate-y-0.5"
+          >
+            <span className="w-2.5 h-2.5 rounded-full bg-[#E23744] border border-white" />
+            <span>Order on Zomato</span>
+          </a>
+        </div>
+
       </div>
     </section>
   );

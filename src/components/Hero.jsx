@@ -138,6 +138,35 @@ export default function Hero({ courtyardMode, toggleCourtyardMode }) {
           </button>
         </div>
 
+        {/* Online Delivery Partners: Swiggy & Zomato */}
+        <div className="mt-8 pt-6 border-t border-gold/15 flex flex-wrap items-center justify-center gap-3 text-xs font-mono">
+          <span className="text-[11px] uppercase tracking-[0.2em] text-[#A39E93]">
+            Doorstep Delivery:
+          </span>
+
+          {/* Swiggy */}
+          <a
+            href="https://www.swiggy.com/city/hyderabad/gokulam-kukatpally-rest1146823?is_retargeting=true&media_source=GooglePlaceOrder"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#141715]/90 hover:bg-[#FC8019]/20 border border-[#FC8019]/40 hover:border-[#FC8019] text-[#FFF] hover:text-[#FC8019] transition-all duration-300 shadow-sm group transform hover:-translate-y-0.5"
+          >
+            <span className="w-2 h-2 rounded-full bg-[#FC8019] animate-pulse" />
+            <span className="font-semibold tracking-wider text-[11px]">Order on Swiggy</span>
+          </a>
+
+          {/* Zomato */}
+          <a
+            href="https://www.zomato.com/hyderabad/gokulam-rajendra-nagar/order"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#141715]/90 hover:bg-[#E23744]/20 border border-[#E23744]/40 hover:border-[#E23744] text-[#FFF] hover:text-[#E23744] transition-all duration-300 shadow-sm group transform hover:-translate-y-0.5"
+          >
+            <span className="w-2 h-2 rounded-full bg-[#E23744] animate-pulse" />
+            <span className="font-semibold tracking-wider text-[11px]">Order on Zomato</span>
+          </a>
+        </div>
+
       </div>
 
       {/* Subtle Scroll Indicator */}

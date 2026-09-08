@@ -340,8 +340,33 @@ export default function Navbar({ courtyardMode, toggleCourtyardMode, onOpenReser
               </Link>
             )}
 
+            {/* Doorstep Delivery Quick Options */}
+            <div className="pt-2 flex items-center justify-between gap-3">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#A39E93]">Order Online:</span>
+              <div className="flex items-center gap-2">
+                <a
+                  href="https://www.swiggy.com/city/hyderabad/gokulam-kukatpally-rest1146823?is_retargeting=true&media_source=GooglePlaceOrder"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FC8019]/15 hover:bg-[#FC8019] border border-[#FC8019]/40 text-white font-mono text-[11px] font-semibold transition-all"
+                >
+                  <span className="w-2 h-2 rounded-full bg-[#FC8019]" />
+                  <span>Swiggy</span>
+                </a>
+                <a
+                  href="https://www.zomato.com/hyderabad/gokulam-rajendra-nagar/order"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#E23744]/15 hover:bg-[#E23744] border border-[#E23744]/40 text-white font-mono text-[11px] font-semibold transition-all"
+                >
+                  <span className="w-2 h-2 rounded-full bg-[#E23744]" />
+                  <span>Zomato</span>
+                </a>
+              </div>
+            </div>
+
             {/* Quick Timing & Location Info */}
-            <div className="grid grid-cols-2 gap-2 text-[11px] font-mono text-[#A39E93] pt-1">
+            <div className="grid grid-cols-2 gap-2 text-[11px] font-mono text-[#A39E93] pt-1 border-t border-gold/15">
               <div className="flex items-center gap-1.5">
                 <Clock className="w-3.5 h-3.5 text-gold flex-shrink-0" />
                 <span>12 PM – 11 PM</span>
