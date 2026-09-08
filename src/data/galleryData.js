@@ -43,9 +43,9 @@ export const GALLERY_ITEMS = [
     featured: false,
   },
   {
-    id: 'g-biryani',
-    title: 'Special Dum Biryani on Patravali Leaf',
-    subtitle: 'Steaming fragrant basmati rice layered with spiced chicken, garnished with fresh cilantro on traditional eco-leaf plate.',
+    id: 'g-pulav',
+    title: 'Special Chicken Pulav on Patravali Leaf',
+    subtitle: 'Fragrant spiced basmati rice tossed with tender chicken, garnished with fresh cilantro and served on traditional eco-leaf plate.',
     category: 'dishes',
     image: '/assets/gokulam/biryani.webp',
     aspect: 'square',

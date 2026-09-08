@@ -78,7 +78,7 @@ export default function Footer() {
             </p>
 
             <p className="text-xs text-[#A39E93] leading-relaxed max-w-sm">
-              An authentic Indian courtyard dining experience in Kukatpally, serving comforting clay-oven starters, slow-cooked biryanis, and Indo-Chinese favourites under open skies.
+              An authentic Indian courtyard dining experience in Kukatpally, serving comforting clay-oven starters, aromatic chicken pulao, and Indo-Chinese favourites under open skies.
             </p>
 
             {/* Google Rating Badge */}

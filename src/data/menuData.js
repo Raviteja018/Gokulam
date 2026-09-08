@@ -1,5 +1,5 @@
 export const MENU_CATEGORIES = [
-  { id: 'specials', name: 'Biryani & Specials', count: 4, subtitle: 'Clay-oven starters, slow-cooked leaf-plate biryanis and refreshing coolers' },
+  { id: 'specials', name: 'Pulao & Specials', count: 4, subtitle: 'Clay-oven starters, fragrant leaf-plate pulaos, and refreshing coolers' },
   { id: 'chicken-starters', name: 'Chicken Starters', count: 24, subtitle: 'Crispy Andhra-spiced, wok-tossed and slow-roasted chicken appetisers' },
   { id: 'prawns-fish', name: 'Prawns & Fish', count: 13, subtitle: 'Fresh catch tossed in Andhra bar-style masala and spicy Schezwan glazes' },
   { id: 'egg-starters', name: 'Egg Starters', count: 6, subtitle: 'Homestyle fluffy omelettes, spiced bhurji, and pan-seared egg roasts' },
@@ -8,16 +8,16 @@ export const MENU_CATEGORIES = [
 ];
 
 export const MENU_ITEMS = [
-  // Gokulam Specials & Biryanis (from photo and receipt)
+  // Gokulam Specials & Pulaos (from photo and receipt)
   {
     id: 'sp-1',
-    name: 'Special Chicken Dum Biryani',
+    name: 'Special Chicken Pulav',
     price: 170,
     category: 'specials',
     diet: 'non-veg',
     isSignature: true,
     image: '/assets/gokulam/biryani.webp',
-    description: 'Slow-cooked fragrant basmati rice layered with spiced tender chicken, served traditionally on eco patravali leaf.'
+    description: 'Fragrant spiced basmati rice tossed with tender chicken cuts, roasted whole spices, and caramelized onions, served traditionally on eco patravali leaf.'
   },
   {
     id: 'sp-2',

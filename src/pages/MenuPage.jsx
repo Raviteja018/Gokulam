@@ -41,7 +41,7 @@ export default function MenuPage({ onOpenReservation }) {
           </h1>
 
           <p className="text-base sm:text-lg text-[#D3CBBC] max-w-2xl mx-auto font-normal leading-relaxed mb-8">
-            Explore our complete kitchen selection: sizzling tandoor starters, Andhra-style gravies, fresh coastal seafood, wok-charred fried rice, and aromatic leaf-plate biryanis.
+            Explore our complete kitchen selection: sizzling tandoor starters, Andhra-style gravies, fresh coastal seafood, wok-charred fried rice, and aromatic leaf-plate pulaos.
           </p>
 
           {/* Quick Pillars Bar */}

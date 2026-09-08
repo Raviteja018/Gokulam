@@ -19,8 +19,8 @@ export default function HomePage({ courtyardMode, toggleCourtyardMode, onOpenRes
       icon: Flame,
     },
     {
-      title: 'Biryani & Pulao',
-      desc: 'Special Dum Biryani & Gokulam Egg Pulao served on traditional patravali leaf.',
+      title: 'Signature Pulaos',
+      desc: 'Special Chicken Pulav & Gokulam Egg Pulao served on traditional patravali leaf.',
       count: 'Courtyard Specials',
       icon: Award,
     },
@@ -79,7 +79,7 @@ export default function HomePage({ courtyardMode, toggleCourtyardMode, onOpenRes
               </h2>
 
               <p className="text-sm sm:text-base text-[#D3CBBC] leading-relaxed mb-8">
-                From clay-oven spiced chicken starters starting at ₹89 to slow-cooked dum biryani at ₹170, discover our full 70+ dish collection on our dedicated dining menu page.
+                From clay-oven spiced chicken starters starting at ₹89 to aromatic Special Chicken Pulav at ₹170, discover our full 70+ dish collection on our dedicated dining menu page.
               </p>
             </div>
 

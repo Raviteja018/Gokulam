@@ -96,7 +96,7 @@ export default function BrandStory() {
             {/* Body Copy */}
             <p className="text-base text-[#D3CBBC] font-normal leading-relaxed mb-8">
               From comforting favourites to flavourful Indian and Indo-Chinese preparations, every meal is served with the warmth of a neighbourhood gathering place.
-              Whether it’s the sizzle of tandoori starters under the open evening sky or a steaming plate of aromatic biryani served on traditional eco-leaf plates, dining at Gokulam is an experience made to be shared.
+              Whether it’s the sizzle of tandoori starters under the open evening sky or a steaming plate of aromatic chicken pulav served on traditional eco-leaf plates, dining at Gokulam is an experience made to be shared.
             </p>
 
             {/* 3 Core Values Pill Grid */}

@@ -124,7 +124,15 @@ export default function GokulamLogo({ size = 'md', variant = 'gold', className =
               strokeWidth="0.8"
             />
 
-            {/* 2. Main Bamboo Reed Shaft with Solid Fallback + Rich Gradient Overlay */}
+            {/* 2. Main Bamboo Reed Shaft: Solid rich golden base + 3D Cylindrical Bamboo Shading */}
+            <rect
+              x="22"
+              y="7"
+              width="174"
+              height="10"
+              rx="2"
+              fill="#D4AF37"
+            />
             <rect
               x="22"
               y="7"

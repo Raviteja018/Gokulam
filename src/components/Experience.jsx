@@ -16,7 +16,7 @@ export default function Experience() {
       id: 'exp-2',
       title: 'Flavourful Food',
       description: 'A menu filled with familiar favourites, bold flavours and satisfying portions.',
-      detail: 'From sizzling clay-oven Chicken Tikka to wok-tossed Schezwan noodles and aromatic leaf-plate biryanis.',
+      detail: 'From sizzling clay-oven Chicken Tikka to wok-tossed Schezwan noodles and aromatic leaf-plate pulaos.',
       image: '/assets/gokulam/dish1.webp',
       icon: Flame,
       tag: 'The Kitchen',
