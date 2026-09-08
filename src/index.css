@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: #0E100F;
+  --panel: #161917;
+  --accent: #D4AF37;
+  --accent-hover: #E5C358;
+  --terracotta: #C85A32;
+  --cream: #F7F4EC;
+  --text-muted: #A39E93;
+  --border-gold: rgba(212, 175, 55, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0E100F;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2E2B;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Texture & Lattice Accents */
+.bg-jaali {
+  background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-wood-lattice {
+  background-image: repeating-linear-gradient(45deg, rgba(61, 39, 29, 0.25) 0, rgba(61, 39, 29, 0.25) 2px, transparent 0, transparent 18px),
+                    repeating-linear-gradient(-45deg, rgba(61, 39, 29, 0.25) 0, rgba(61, 39, 29, 0.25) 2px, transparent 0, transparent 18px);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF6D6 0%, #D4AF37 50%, #B89228 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.terracotta-gradient-text {
+  background: linear-gradient(135deg, #FF9575 0%, #C85A32 50%, #943A18 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle Shimmer & Lantern Glow Animation */
+@keyframes lanternGlow {
+  0%, 100% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 12px rgba(224, 122, 95, 0.4));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 24px rgba(224, 122, 95, 0.7));
+  }
+}
+
+.animate-lantern {
+  animation: lanternGlow 4s ease-in-out infinite;
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-slow {
+  animation: subtleFloat 6s ease-in-out infinite;
+}
+
+/* Premium Card Border */
+.card-border {
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-border:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 8px 32px -2px rgba(212, 175, 55, 0.15);
+}
+
+/* Touch targets */
+@media (pointer: coarse) {
+  .btn-touch {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
