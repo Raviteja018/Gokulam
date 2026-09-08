@@ -5,10 +5,16 @@ import { GALLERY_CATEGORIES, GALLERY_ITEMS } from '../data/galleryData';
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [showAllMobile, setShowAllMobile] = useState(false);
 
   const filteredItems = GALLERY_ITEMS.filter(
     (item) => activeCategory === 'all' || item.category === activeCategory
   );
+
+  const handleCategoryChange = (catId) => {
+    setActiveCategory(catId);
+    setShowAllMobile(false);
+  };
 
   const openLightbox = (index) => {
     setSelectedImageIndex(index);
@@ -45,7 +51,7 @@ export default function Gallery() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-2 mb-3">
             <div className="w-8 h-[1px] bg-gold" />
             <span className="text-xs font-mono uppercase tracking-[0.25em] text-gold">
@@ -67,7 +73,7 @@ export default function Gallery() {
             {GALLERY_CATEGORIES.map((cat) => (
               <button
                 key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
+                onClick={() => handleCategoryChange(cat.id)}
                 className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 ${
                   activeCategory === cat.id
                     ? 'bg-gold text-[#0E100F] font-bold shadow-gold-sm'
@@ -80,10 +86,11 @@ export default function Gallery() {
           </div>
         </div>
 
-        {/* Asymmetric Editorial Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Asymmetric Editorial Gallery Grid (Mobile Curated: Top 4 by default) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {filteredItems.map((item, index) => {
             const isTall = item.aspect === 'tall';
+            const isHiddenOnMobile = index >= 4 && !showAllMobile;
 
             return (
               <div
@@ -91,9 +98,9 @@ export default function Gallery() {
                 onClick={() => openLightbox(index)}
                 className={`group relative rounded-2xl overflow-hidden bg-[#141715] border border-gold/20 hover:border-gold/60 cursor-pointer shadow-xl transition-all duration-500 hover:-translate-y-1 ${
                   isTall ? 'sm:row-span-2' : ''
-                }`}
+                } ${isHiddenOnMobile ? 'hidden sm:block' : 'block'}`}
               >
-                <div className={`relative w-full ${isTall ? 'h-full min-h-[420px]' : 'h-72'}`}>
+                <div className={`relative w-full ${isTall ? 'h-64 sm:h-full sm:min-h-[420px]' : 'h-56 sm:h-72'}`}>
                   <img
                     src={item.image}
                     alt={item.title}
@@ -108,7 +115,7 @@ export default function Gallery() {
                   </div>
 
                   {/* Caption Overlay */}
-                  <div className="absolute bottom-0 inset-x-0 p-5 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                     <span className="text-[10px] font-mono text-gold uppercase tracking-wider block mb-1">
                       {item.category}
                     </span>
@@ -125,6 +132,21 @@ export default function Gallery() {
             );
           })}
         </div>
+
+        {/* Mobile-Only "Explore All / Show Less" Toggle Button */}
+        {filteredItems.length > 4 && (
+          <div className="sm:hidden mt-8 flex justify-center">
+            <button
+              onClick={() => setShowAllMobile(!showAllMobile)}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#161917] border border-gold/40 hover:border-gold text-gold text-xs font-mono uppercase tracking-[0.16em] font-semibold transition-all shadow-md active:scale-95"
+            >
+              <Camera className="w-4 h-4 text-gold" />
+              {showAllMobile
+                ? 'Show Curated Highlights'
+                : `Explore All Moments (${filteredItems.length - 4} More)`}
+            </button>
+          </div>
+        )}
 
       </div>
 
