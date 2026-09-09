@@ -29,11 +29,8 @@ export default function FinalCTA() {
 
       {/* Content Container */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        
-        {/* Subtle Decorative Emblem */}
-        <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold mb-6 bg-[#0E100F]/60 backdrop-blur-md shadow-gold-sm">
-          <Sparkles className="w-5 h-5" />
-        </div>
+
+
 
         {/* Large Editorial Headline */}
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-[#F7F4EC] font-bold tracking-tight leading-tight mb-8">

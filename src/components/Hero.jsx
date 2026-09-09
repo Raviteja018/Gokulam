@@ -38,9 +38,8 @@ export default function Hero({ courtyardMode, toggleCourtyardMode }) {
       <div className="absolute inset-0 z-0 bg-[#0E100F] overflow-hidden">
         {/* Night Courtyard Image */}
         <div
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 scale-105 transform motion-safe:animate-float-slow ${
-            isNight ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 scale-105 transform motion-safe:animate-float-slow ${isNight ? 'opacity-100' : 'opacity-0'
+            }`}
           style={{
             backgroundImage: `url('/assets/gokulam/gokulam_night.webp')`,
             backgroundPosition: 'center 40%',
@@ -50,9 +49,8 @@ export default function Hero({ courtyardMode, toggleCourtyardMode }) {
 
         {/* Day Courtyard Image */}
         <div
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 scale-105 transform motion-safe:animate-float-slow ${
-            isNight ? 'opacity-0' : 'opacity-100'
-          }`}
+          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 scale-105 transform motion-safe:animate-float-slow ${isNight ? 'opacity-0' : 'opacity-100'
+            }`}
           style={{
             backgroundImage: `url('/assets/gokulam/Gokulam.webp')`,
             backgroundPosition: 'center 35%',
@@ -139,12 +137,12 @@ export default function Hero({ courtyardMode, toggleCourtyardMode }) {
         </div>
 
         {/* Online Delivery Partners: Swiggy & Zomato */}
-        <div className="mt-8 pt-6 border-t border-gold/15 flex flex-wrap items-center justify-center gap-3 text-xs font-mono">
+        {/* <div className="mt-8 pt-6 border-t border-gold/15 flex flex-wrap items-center justify-center gap-3 text-xs font-mono">
           <span className="text-[11px] uppercase tracking-[0.2em] text-[#A39E93]">
             Doorstep Delivery:
           </span>
 
-          {/* Swiggy */}
+  
           <a
             href="https://www.swiggy.com/city/hyderabad/gokulam-kukatpally-rest1146823?is_retargeting=true&media_source=GooglePlaceOrder"
             target="_blank"
@@ -155,7 +153,7 @@ export default function Hero({ courtyardMode, toggleCourtyardMode }) {
             <span className="font-semibold tracking-wider text-[11px]">Order on Swiggy</span>
           </a>
 
-          {/* Zomato */}
+
           <a
             href="https://www.zomato.com/hyderabad/gokulam-rajendra-nagar/order"
             target="_blank"
@@ -165,7 +163,7 @@ export default function Hero({ courtyardMode, toggleCourtyardMode }) {
             <span className="w-2 h-2 rounded-full bg-[#E23744] animate-pulse" />
             <span className="font-semibold tracking-wider text-[11px]">Order on Zomato</span>
           </a>
-        </div>
+        </div> */}
 
       </div>
 
