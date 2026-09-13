@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Sun, Moon, Utensils, Calendar, MapPin, Clock, ChevronRight } from 'lucide-react';
+import { Menu, X, Utensils, MapPin, Clock, ChevronRight } from 'lucide-react';
 import GokulamLogo from './GokulamLogo';
+import { SwiggyLogo, ZomatoLogo } from './icons/DeliveryLogos';
 
-export default function Navbar({ courtyardMode, toggleCourtyardMode, onOpenReservation }) {
+export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -150,36 +151,20 @@ export default function Navbar({ courtyardMode, toggleCourtyardMode, onOpenReser
               })}
             </nav>
 
-            {/* Desktop Controls: Day/Night Mode & Primary Action CTA */}
+            {/* Desktop Controls: Primary Action CTA */}
             <div className="hidden md:flex items-center space-x-4">
-              <button
-                onClick={toggleCourtyardMode}
-                className="px-3.5 py-1.5 rounded-full border border-gold/30 bg-[#161917]/80 hover:bg-[#1F2420] text-[#D4AF37] text-xs font-mono tracking-wider flex items-center gap-2 transition-all duration-300 hover:border-gold shadow-sm"
-                title={`Switch to ${courtyardMode === 'night' ? 'Daylight Courtyard' : 'Twilight Lantern Glow'}`}
-                aria-label="Toggle courtyard ambiance"
-              >
-                {courtyardMode === 'night' ? (
-                  <>
-                    <Moon className="w-3.5 h-3.5 text-[#D4AF37] animate-pulse" />
-                    <span className="text-[11px]">Twilight Glow</span>
-                  </>
-                ) : (
-                  <>
-                    <Sun className="w-3.5 h-3.5 text-amber-400" />
-                    <span className="text-[11px]">Day Pavilion</span>
-                  </>
-                )}
-              </button>
 
               {/* Dynamic CTA depending on current page */}
               {isMenuPage ? (
-                <button
-                  onClick={onOpenReservation}
+                <a
+                  href="https://www.google.com/maps/place/CAFE+GOKULAM/@17.4882145,78.3830695,19z/data=!4m6!3m5!1s0x3bcb9331aa997777:0xff4a908c3fdc9ca6!8m2!3d17.4882145!4d78.3830695!16s%2Fg%2F11w7tq9_04"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative inline-flex items-center gap-2 px-5 py-2 rounded-full overflow-hidden text-xs font-semibold uppercase tracking-widest text-[#0E100F] bg-gradient-to-r from-[#FFF4D0] via-[#D4AF37] to-[#B68C26] hover:brightness-110 shadow-gold-sm transition-all duration-300 transform hover:-translate-y-0.5"
                 >
-                  <Calendar className="w-3.5 h-3.5" />
-                  <span>Reserve Table</span>
-                </button>
+                  <MapPin className="w-3.5 h-3.5" />
+                  <span>Get Directions</span>
+                </a>
               ) : (
                 <Link
                   to="/menu"
@@ -191,19 +176,8 @@ export default function Navbar({ courtyardMode, toggleCourtyardMode, onOpenReser
               )}
             </div>
 
-            {/* Mobile Bar Controls: Mode Toggle & Hamburger Trigger */}
+            {/* Mobile Bar Controls: Hamburger Trigger */}
             <div className="flex md:hidden items-center gap-2">
-              <button
-                onClick={toggleCourtyardMode}
-                className="p-2 rounded-full border border-gold/35 text-[#D4AF37] bg-[#161917]/90 active:scale-95 transition-all"
-                aria-label="Toggle atmosphere mode"
-              >
-                {courtyardMode === 'night' ? (
-                  <Moon className="w-4 h-4 text-gold" />
-                ) : (
-                  <Sun className="w-4 h-4 text-amber-400" />
-                )}
-              </button>
 
               <button
                 onClick={() => setMobileMenuOpen(true)}
@@ -237,23 +211,6 @@ export default function Navbar({ courtyardMode, toggleCourtyardMode, onOpenReser
             </Link>
 
             <div className="flex items-center gap-2">
-              <button
-                onClick={toggleCourtyardMode}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/30 bg-[#161917] text-xs"
-                aria-label="Toggle atmosphere"
-              >
-                {courtyardMode === 'night' ? (
-                  <>
-                    <Moon className="w-3.5 h-3.5 text-gold animate-pulse" />
-                    <span className="text-[11px] font-mono text-gold">Twilight</span>
-                  </>
-                ) : (
-                  <>
-                    <Sun className="w-3.5 h-3.5 text-amber-400" />
-                    <span className="text-[11px] font-mono text-amber-300">Daylight</span>
-                  </>
-                )}
-              </button>
 
               <button
                 onClick={() => setMobileMenuOpen(false)}
@@ -319,16 +276,16 @@ export default function Navbar({ courtyardMode, toggleCourtyardMode, onOpenReser
           {/* Action Button & Operating Details */}
           <div className="relative z-10 px-6 pb-8 pt-4 border-t border-gold/20 bg-[#0E100F] space-y-4">
             {isMenuPage ? (
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenReservation();
-                }}
+              <a
+                href="https://www.google.com/maps/place/CAFE+GOKULAM/@17.4882145,78.3830695,19z/data=!4m6!3m5!1s0x3bcb9331aa997777:0xff4a908c3fdc9ca6!8m2!3d17.4882145!4d78.3830695!16s%2Fg%2F11w7tq9_04"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
                 className="w-full py-3.5 rounded-full flex items-center justify-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-[#0E100F] bg-gradient-to-r from-[#FFF4D0] via-[#D4AF37] to-[#B68C26] shadow-gold-md active:scale-[0.98] transition-all"
               >
-                <Calendar className="w-4 h-4" />
-                <span>Reserve Table</span>
-              </button>
+                <MapPin className="w-4 h-4" />
+                <span>Get Directions</span>
+              </a>
             ) : (
               <Link
                 to="/menu"
@@ -350,7 +307,7 @@ export default function Navbar({ courtyardMode, toggleCourtyardMode, onOpenReser
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FC8019]/15 hover:bg-[#FC8019] border border-[#FC8019]/40 text-white font-mono text-[11px] font-semibold transition-all"
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#FC8019]" />
+                  <SwiggyLogo className="w-3.5 h-3.5 text-[#FC8019] group-hover:text-white" fill="currentColor" />
                   <span>Swiggy</span>
                 </a>
                 <a
@@ -359,7 +316,7 @@ export default function Navbar({ courtyardMode, toggleCourtyardMode, onOpenReser
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#E23744]/15 hover:bg-[#E23744] border border-[#E23744]/40 text-white font-mono text-[11px] font-semibold transition-all"
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#E23744]" />
+                  <ZomatoLogo className="w-3.5 h-3.5 text-[#E23744] group-hover:text-white" fill="currentColor" />
                   <span>Zomato</span>
                 </a>
               </div>

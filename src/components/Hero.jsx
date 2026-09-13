@@ -2,10 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowDown, MapPin, Star, Navigation, Clock, Sparkles } from 'lucide-react';
 import GokulamLogo from './GokulamLogo';
+import { SwiggyLogo, ZomatoLogo } from './icons/DeliveryLogos';
 
-export default function Hero({ courtyardMode, toggleCourtyardMode }) {
-  const isNight = courtyardMode === 'night';
-
+export default function Hero() {
   const handleScrollTo = (e, targetId) => {
     e.preventDefault();
     const target = document.querySelector(targetId);
@@ -34,26 +33,13 @@ export default function Hero({ courtyardMode, toggleCourtyardMode }) {
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-12 sm:pt-24 sm:pb-16"
       role="banner"
     >
-      {/* Background Media with Crossfade Between Day & Twilight Modes */}
+      {/* Background Media: Night Courtyard View Only */}
       <div className="absolute inset-0 z-0 bg-[#0E100F] overflow-hidden">
-        {/* Night Courtyard Image */}
         <div
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 scale-105 transform motion-safe:animate-float-slow ${isNight ? 'opacity-100' : 'opacity-0'
-            }`}
+          className="absolute inset-0 bg-cover bg-center scale-105 transform motion-safe:animate-float-slow opacity-100"
           style={{
-            backgroundImage: `url('/assets/gokulam/gokulam_night.webp')`,
+            backgroundImage: `url('/assets/gokulam/gokulam_evening.webp')`,
             backgroundPosition: 'center 40%',
-          }}
-          aria-hidden="true"
-        />
-
-        {/* Day Courtyard Image */}
-        <div
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 scale-105 transform motion-safe:animate-float-slow ${isNight ? 'opacity-0' : 'opacity-100'
-            }`}
-          style={{
-            backgroundImage: `url('/assets/gokulam/Gokulam.webp')`,
-            backgroundPosition: 'center 35%',
           }}
           aria-hidden="true"
         />
@@ -137,33 +123,31 @@ export default function Hero({ courtyardMode, toggleCourtyardMode }) {
         </div>
 
         {/* Online Delivery Partners: Swiggy & Zomato */}
-        {/* <div className="mt-8 pt-6 border-t border-gold/15 flex flex-wrap items-center justify-center gap-3 text-xs font-mono">
+        <div className="mt-8 pt-6 border-t border-gold/15 flex flex-wrap items-center justify-center gap-3 text-xs font-mono">
           <span className="text-[11px] uppercase tracking-[0.2em] text-[#A39E93]">
             Doorstep Delivery:
           </span>
 
-  
           <a
             href="https://www.swiggy.com/city/hyderabad/gokulam-kukatpally-rest1146823?is_retargeting=true&media_source=GooglePlaceOrder"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#141715]/90 hover:bg-[#FC8019]/20 border border-[#FC8019]/40 hover:border-[#FC8019] text-[#FFF] hover:text-[#FC8019] transition-all duration-300 shadow-sm group transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#141715]/90 hover:bg-[#FC8019]/20 border border-[#FC8019]/40 hover:border-[#FC8019] text-white hover:text-[#FC8019] transition-all duration-300 shadow-sm group transform hover:-translate-y-0.5"
           >
-            <span className="w-2 h-2 rounded-full bg-[#FC8019] animate-pulse" />
+            <SwiggyLogo className="w-3.5 h-3.5 text-[#FC8019] group-hover:scale-110 transition-transform" fill="currentColor" />
             <span className="font-semibold tracking-wider text-[11px]">Order on Swiggy</span>
           </a>
-
 
           <a
             href="https://www.zomato.com/hyderabad/gokulam-rajendra-nagar/order"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#141715]/90 hover:bg-[#E23744]/20 border border-[#E23744]/40 hover:border-[#E23744] text-[#FFF] hover:text-[#E23744] transition-all duration-300 shadow-sm group transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#141715]/90 hover:bg-[#E23744]/20 border border-[#E23744]/40 hover:border-[#E23744] text-white hover:text-[#E23744] transition-all duration-300 shadow-sm group transform hover:-translate-y-0.5"
           >
-            <span className="w-2 h-2 rounded-full bg-[#E23744] animate-pulse" />
+            <ZomatoLogo className="w-3.5 h-3.5 text-[#E23744] group-hover:scale-110 transition-transform" fill="currentColor" />
             <span className="font-semibold tracking-wider text-[11px]">Order on Zomato</span>
           </a>
-        </div> */}
+        </div>
 
       </div>
 

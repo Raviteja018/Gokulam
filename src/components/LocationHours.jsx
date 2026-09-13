@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Clock, Navigation, CheckCircle2, Car, Users, Utensils } from 'lucide-react';
 
-export default function LocationHours({ onOpenReservation }) {
+export default function LocationHours() {
   // Clear placeholder phone number as specified in prompt
   // (Easily replaced with official number once provided by restaurant)
   const PHONE_PLACEHOLDER = '+91 91000 00000';

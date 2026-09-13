@@ -10,7 +10,7 @@ import GoogleReviews from '../components/GoogleReviews';
 import LocationHours from '../components/LocationHours';
 import FinalCTA from '../components/FinalCTA';
 
-export default function HomePage({ courtyardMode, toggleCourtyardMode, onOpenReservation }) {
+export default function HomePage() {
   const menuHighlights = [
     {
       title: 'Tandoor & Starters',
@@ -40,11 +40,8 @@ export default function HomePage({ courtyardMode, toggleCourtyardMode, onOpenRes
 
   return (
     <main id="main">
-      {/* Cinematic Hero Section with Day/Night Courtyard Toggle */}
-      <Hero
-        courtyardMode={courtyardMode}
-        toggleCourtyardMode={toggleCourtyardMode}
-      />
+      {/* Cinematic Hero Section: Fixed Night Courtyard View */}
+      <Hero />
 
       {/* Brand Narrative: A Taste of Gokulam */}
       <BrandStory />
@@ -120,7 +117,7 @@ export default function HomePage({ courtyardMode, toggleCourtyardMode, onOpenRes
               </Link>
 
               <span className="text-xs font-mono text-[#A39E93]">
-                Includes exact dish pricing, dietary filters, and bill estimator
+                Includes exact dish pricing, chef specialties, and dietary filters
               </span>
             </div>
 
@@ -136,9 +133,7 @@ export default function HomePage({ courtyardMode, toggleCourtyardMode, onOpenRes
       <GoogleReviews />
 
       {/* Location & Operating Hours (Official CAFE GOKULAM Map) */}
-      <LocationHours
-        onOpenReservation={onOpenReservation}
-      />
+      <LocationHours />
 
       {/* Final Brand Impact CTA */}
       <FinalCTA />

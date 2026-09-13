@@ -102,3 +102,26 @@
     justify-content: center;
   }
 }
+
+/* GPU-Accelerated Infinite Review Marquee (100% hardware-composited, zero lagging) */
+@keyframes smoothMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-smooth {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: smoothMarquee 58s linear infinite;
+}
+
+.animate-marquee-smooth:hover {
+  animation-play-state: paused;
+}
+
+

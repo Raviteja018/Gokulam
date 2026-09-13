@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { MapPin, Clock, ArrowUp, Star, Navigation } from 'lucide-react';
 import GokulamLogo from './GokulamLogo';
+import { SwiggyLogo, ZomatoLogo } from './icons/DeliveryLogos';
 
 export default function Footer() {
   const location = useLocation();
@@ -102,18 +103,18 @@ export default function Footer() {
                   href="https://www.swiggy.com/city/hyderabad/gokulam-kukatpally-rest1146823?is_retargeting=true&media_source=GooglePlaceOrder"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#1A1E1C] hover:bg-[#FC8019]/20 border border-[#FC8019]/40 hover:border-[#FC8019] text-cream hover:text-[#FC8019] text-xs font-mono transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#1A1E1C] hover:bg-[#FC8019]/20 border border-[#FC8019]/40 hover:border-[#FC8019] text-cream hover:text-[#FC8019] text-xs font-mono transition-all duration-300 group"
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#FC8019]" />
+                  <SwiggyLogo className="w-3.5 h-3.5 text-[#FC8019] group-hover:scale-110 transition-transform" fill="currentColor" />
                   <span>Swiggy</span>
                 </a>
                 <a
                   href="https://www.zomato.com/hyderabad/gokulam-rajendra-nagar/order"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#1A1E1C] hover:bg-[#E23744]/20 border border-[#E23744]/40 hover:border-[#E23744] text-cream hover:text-[#E23744] text-xs font-mono transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#1A1E1C] hover:bg-[#E23744]/20 border border-[#E23744]/40 hover:border-[#E23744] text-cream hover:text-[#E23744] text-xs font-mono transition-all duration-300 group"
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#E23744]" />
+                  <ZomatoLogo className="w-3.5 h-3.5 text-[#E23744] group-hover:scale-110 transition-transform" fill="currentColor" />
                   <span>Zomato</span>
                 </a>
               </div>

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Sparkles, MapPin, Clock, FileText, Calendar, Phone } from 'lucide-react';
+import { ArrowLeft, Sparkles, MapPin, Clock, Navigation } from 'lucide-react';
 import MenuSection from '../components/MenuSection';
 import FullMenuModal from '../components/FullMenuModal';
+import { SwiggyLogo, ZomatoLogo } from '../components/icons/DeliveryLogos';
 
-export default function MenuPage({ onOpenReservation }) {
+export default function MenuPage() {
   const [isFullMenuOpen, setIsFullMenuOpen] = useState(false);
 
   return (
@@ -17,20 +18,21 @@ export default function MenuPage({ onOpenReservation }) {
 
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           
-          {/* Back Link */}
-          <div className="inline-flex items-center mb-6">
+          {/* Back Navigation Bar */}
+          <div className="flex items-center justify-center mb-5">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1A1E1C] border border-gold/25 text-xs font-mono text-[#D3CBBC] hover:text-gold hover:border-gold transition-all"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1A1E1C] border border-gold/30 text-xs font-mono text-[#D3CBBC] hover:text-gold hover:border-gold transition-all shadow-sm group"
             >
-              <ArrowLeft className="w-3.5 h-3.5" />
+              <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1 text-gold" />
               <span>Back to Home</span>
             </Link>
           </div>
 
-          <div className="inline-flex items-center gap-2 mb-3">
+          {/* Editorial Catalogue Badge */}
+          <div className="flex items-center justify-center gap-2 mb-3">
             <Sparkles className="w-4 h-4 text-gold" />
-            <span className="text-xs font-mono uppercase tracking-[0.25em] text-gold">
+            <span className="text-xs font-mono uppercase tracking-[0.25em] text-gold font-semibold">
               Complete Dining Catalogue
             </span>
             <Sparkles className="w-4 h-4 text-gold" />
@@ -69,8 +71,8 @@ export default function MenuPage({ onOpenReservation }) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FC8019]/15 hover:bg-[#FC8019] text-white border border-[#FC8019]/50 text-xs font-mono font-semibold transition-all duration-300"
             >
-              <span className="w-2 h-2 rounded-full bg-[#FC8019] border border-white" />
-              <span>Order on Swiggy</span>
+              <SwiggyLogo className="w-3.5 h-3.5 text-[#FC8019] group-hover:text-white" fill="currentColor" />
+              <span>Swiggy</span>
             </a>
             <a
               href="https://www.zomato.com/hyderabad/gokulam-rajendra-nagar/order"
@@ -78,8 +80,8 @@ export default function MenuPage({ onOpenReservation }) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E23744]/15 hover:bg-[#E23744] text-white border border-[#E23744]/50 text-xs font-mono font-semibold transition-all duration-300"
             >
-              <span className="w-2 h-2 rounded-full bg-[#E23744] border border-white" />
-              <span>Order on Zomato</span>
+              <ZomatoLogo className="w-3.5 h-3.5 text-[#E23744] group-hover:text-white" fill="currentColor" />
+              <span>Zomato</span>
             </a>
           </div>
 
@@ -111,9 +113,10 @@ export default function MenuPage({ onOpenReservation }) {
               href="https://www.swiggy.com/city/hyderabad/gokulam-kukatpally-rest1146823?is_retargeting=true&media_source=GooglePlaceOrder"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-3 rounded-full bg-[#FC8019]/20 hover:bg-[#FC8019] border border-[#FC8019]/60 text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-sm"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#FC8019] hover:bg-[#e06f12] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-md transform hover:-translate-y-0.5"
             >
-              Swiggy
+              <SwiggyLogo className="w-4 h-4" fill="white" />
+              <span>Order on Swiggy</span>
             </a>
 
             {/* Zomato */}
@@ -121,27 +124,21 @@ export default function MenuPage({ onOpenReservation }) {
               href="https://www.zomato.com/hyderabad/gokulam-rajendra-nagar/order"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-3 rounded-full bg-[#E23744]/20 hover:bg-[#E23744] border border-[#E23744]/60 text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-sm"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#E23744] hover:bg-[#cb2a37] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-md transform hover:-translate-y-0.5"
             >
-              Zomato
+              <ZomatoLogo className="w-4 h-4" fill="white" />
+              <span>Order on Zomato</span>
             </a>
-
-            {/* Reserve Table */}
-            <button
-              onClick={onOpenReservation}
-              className="px-5 py-3 rounded-full bg-gradient-to-r from-[#FFF4D0] via-[#D4AF37] to-[#B68C26] text-[#0E100F] font-bold text-xs font-mono uppercase tracking-wider hover:brightness-110 shadow-gold-sm"
-            >
-              Reserve Table
-            </button>
 
             {/* Get Directions */}
             <a
               href="https://www.google.com/maps/place/CAFE+GOKULAM/@17.4882145,78.3830695,19z/data=!4m6!3m5!1s0x3bcb9331aa997777:0xff4a908c3fdc9ca6!8m2!3d17.4882145!4d78.3830695!16s%2Fg%2F11w7tq9_04"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-3 rounded-full bg-[#0E100F] hover:bg-[#222824] border border-gold/30 text-cream font-mono text-xs uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#0E100F] hover:bg-[#222824] border border-gold/30 text-cream font-mono text-xs uppercase tracking-wider transition-colors"
             >
-              Directions
+              <Navigation className="w-4 h-4 text-terracotta" />
+              <span>Directions</span>
             </a>
           </div>
         </div>

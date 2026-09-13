@@ -5,24 +5,49 @@ export const GALLERY_CATEGORIES = [
   { id: 'refreshments', label: 'Coolers & Drinks' },
 ];
 
+export const COURTYARD_SPOTLIGHT = {
+  video: '/assets/gokulam/gokulam_evening_video.mp4',
+  poster: '/assets/gokulam/gokulam_evening.webp',
+  title: 'Live Courtyard Evening Walkthrough',
+  subtitle: 'Festive Edison string lights, breezy garden palms, and cheerful family dining tables under twilight skies.',
+  tag: 'Live Walkthrough',
+};
+
 export const GALLERY_ITEMS = [
   {
-    id: 'g-night',
-    title: 'Twilight Courtyard Ambiance',
-    subtitle: 'Backlit illuminated GOKULAM sign, warm festive string lights, and cane mudda seating under the night sky.',
+    id: 'g-evening-entrance',
+    title: 'Illuminated Entrance at Night',
+    subtitle: 'Backlit GOKULAM flute emblem, red Mangalore tile roof, festive Edison bulbs, and stone garden pathway.',
     category: 'ambiance',
-    image: '/assets/gokulam/gokulam_night.webp',
-    aspect: 'tall',
-    featured: true,
+    image: '/assets/gokulam/gokulam_evening.webp',
+  },
+  {
+    id: 'g-biryani-thali',
+    title: 'Authentic Chicken Biryani Thali',
+    subtitle: 'Steaming mountain of spiced basmati biryani served with rich mirchi ka salan, onion raita, and lemon.',
+    category: 'dishes',
+    image: '/assets/gokulam/chicken_biryani.webp',
+  },
+  {
+    id: 'g-chilli-chicken-dish',
+    title: 'Courtyard Wok Chilli Chicken',
+    subtitle: 'Fiery Indo-Chinese chicken chunks tossed with fresh green chillies and onions on a sleek black boat dish.',
+    category: 'dishes',
+    image: '/assets/gokulam/chilli_chiken.webp',
+  },
+  {
+    id: 'g-evening-patio',
+    title: 'Open-Air Patio Under Festoon Lights',
+    subtitle: 'Guests dining at wooden tables surrounded by bamboo criss-cross lattice and glowing evening fairy lights.',
+    category: 'ambiance',
+    image: '/assets/gokulam/gokulam_evening_2.webp',
   },
   {
     id: 'g-pulav',
     title: 'Special Chicken Pulav on Patravali Leaf',
-    subtitle: 'Fragrant spiced basmati rice tossed with tender chicken, garnished with fresh cilantro and served on traditional eco-leaf plate.',
+    subtitle: 'Fragrant spiced basmati rice tossed with tender chicken, garnished with fresh cilantro on eco-leaf plate.',
     category: 'dishes',
     image: '/assets/gokulam/biryani.webp',
-    aspect: 'square',
-    featured: true,
   },
   {
     id: 'g-tikka',
@@ -30,8 +55,6 @@ export const GALLERY_ITEMS = [
     subtitle: 'Char-grilled tandoori chicken tikka with cooling mint yogurt chutney and purple onion rings.',
     category: 'dishes',
     image: '/assets/gokulam/dish1.webp',
-    aspect: 'square',
-    featured: true,
   },
   {
     id: 'g-mojitos',
@@ -39,8 +62,6 @@ export const GALLERY_ITEMS = [
     subtitle: 'Vibrant Blue Curacao, Strawberry Punch, and Garden Mint Lime coolers served ice-cold.',
     category: 'refreshments',
     image: '/assets/gokulam/mojitos.webp',
-    aspect: 'tall',
-    featured: true,
   },
   {
     id: 'g-day',
@@ -48,8 +69,6 @@ export const GALLERY_ITEMS = [
     subtitle: 'Mangalore tile pavilion, lush tropical garden, Krishna idol pedestal, and welcoming entrance walkway.',
     category: 'ambiance',
     image: '/assets/gokulam/Gokulam.webp',
-    aspect: 'wide',
-    featured: true,
   },
   {
     id: 'g-noodles',
@@ -57,8 +76,6 @@ export const GALLERY_ITEMS = [
     subtitle: 'Smoky high-flame noodles with shredded chicken, scrambled eggs, fresh vegetables, and lemon.',
     category: 'dishes',
     image: '/assets/gokulam/dish2.webp',
-    aspect: 'square',
-    featured: false,
   },
   {
     id: 'g-interior',
@@ -66,8 +83,6 @@ export const GALLERY_ITEMS = [
     subtitle: 'Polished teakwood tables, comfortable bench seating, and airy industrial truss canopy.',
     category: 'ambiance',
     image: '/assets/gokulam/gokulam_ambiance.webp',
-    aspect: 'tall',
-    featured: false,
   },
   {
     id: 'g-corn',
@@ -75,8 +90,6 @@ export const GALLERY_ITEMS = [
     subtitle: 'Crunchy sweet corn kernels tossed with Indian spices, diced shallots, and fresh herbs.',
     category: 'dishes',
     image: '/assets/gokulam/corn.webp',
-    aspect: 'wide',
-    featured: false,
   },
   {
     id: 'g-opening',
@@ -84,8 +97,6 @@ export const GALLERY_ITEMS = [
     subtitle: 'The warmth of a family gathering place celebrating beginnings in KPHB Phase 6.',
     category: 'ambiance',
     image: '/assets/gokulam/opening.webp',
-    aspect: 'wide',
-    featured: false,
   },
   {
     id: 'g-fried-rice',
@@ -93,17 +104,6 @@ export const GALLERY_ITEMS = [
     subtitle: 'Wok-charred chicken fried rice served with rich mirchi ka salan and chilled onion raita in steel bowls.',
     category: 'dishes',
     image: '/assets/gokulam/fried_rice.webp',
-    aspect: 'square',
-    featured: false,
-  },
-  {
-    id: 'g-chilli-chicken',
-    title: 'Sizzling Chilli Chicken Platter',
-    subtitle: 'Spicy chicken morsels tossed in Indo-Chinese dark glaze on a leaf-shaped serving dish.',
-    category: 'dishes',
-    image: '/assets/gokulam/food_2.webp',
-    aspect: 'wide',
-    featured: false,
   },
   {
     id: 'g-mojito-mint',
@@ -111,7 +111,5 @@ export const GALLERY_ITEMS = [
     subtitle: 'Icy garden mint crusher to complement spicy starters in the evening breeze.',
     category: 'refreshments',
     image: '/assets/gokulam/mojito1.webp',
-    aspect: 'tall',
-    featured: false,
   },
 ];
