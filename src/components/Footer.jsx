@@ -18,7 +18,7 @@ export default function Footer() {
   const navLinks = [
     { name: 'Home', path: '/', isHash: false },
     { name: 'Our Story', path: '/#story', isHash: true, hash: '#story' },
-    { name: 'Dedicated Menu', path: '/menu', isHash: false },
+    { name: 'Menu', path: '/menu', isHash: false },
     { name: 'Gallery', path: '/#gallery', isHash: true, hash: '#gallery' },
     { name: 'Guest Reviews', path: '/#reviews', isHash: true, hash: '#reviews' },
     { name: 'Visit Us', path: '/#location', isHash: true, hash: '#location' },
@@ -46,6 +46,12 @@ export default function Footer() {
           const offsetPosition = elementPosition + window.pageYOffset - navOffset;
           window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
         }
+      }
+    } else {
+      // If already on the same page, smoothly scroll to top
+      if (location.pathname === link.path) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
   };
@@ -140,6 +146,7 @@ export default function Footer() {
                   ) : (
                     <Link
                       to={link.path}
+                      onClick={(e) => handleNavClick(e, link)}
                       className="text-xs text-[#D3CBBC] hover:text-gold transition-colors block py-0.5"
                     >
                       {link.name}
