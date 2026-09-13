@@ -57,20 +57,23 @@ export default function Hero() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
 
 
-        {/* Primary Restaurant Logo & Identity */}
-        {/* <div className="mb-4">
-          <GokulamLogo size="lg" variant="gold" className="transform scale-110 sm:scale-125 md:scale-135 py-3" />
-        </div> */}
+        {/* Editorial Eyebrow Tag for Local SEO & Brand Identity */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#161917]/90 border border-gold/30 backdrop-blur-md mb-4 shadow-sm">
+          <Sparkles className="w-3.5 h-3.5 text-gold" />
+          <span className="text-xs font-mono uppercase tracking-[0.22em] text-gold font-semibold">
+            CAFE GOKULAM • KPHB PHASE 6, KUKATPALLY
+          </span>
+          <Sparkles className="w-3.5 h-3.5 text-gold" />
+        </div>
 
-        {/* Primary Tagline */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#F7F4EC] mt-3 mb-5 max-w-3xl leading-tight">
-          Where <span className="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#FFF6D6] via-[#D4AF37] to-[#B89228]">Tradition</span> Meets the Table
+        {/* Primary H1 Heading: Explicitly contains 'Cafe Gokulam' */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-[#F7F4EC] mb-4 max-w-4xl leading-tight">
+          Cafe Gokulam — <span className="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#FFF6D6] via-[#D4AF37] to-[#B89228]">Where Tradition</span> Meets the Table
         </h1>
 
-        {/* Supporting Narrative */}
-        <p className="text-base sm:text-lg md:text-xl text-[#D3CBBC] max-w-2xl font-normal leading-relaxed mb-8">
-          Authentic flavours, warm hospitality and a dining experience rooted in the spirit of Gokulam.
-          Gather around open-air tables under terracotta tiles and fairy-lit skies.
+        {/* Supporting Narrative with primary local keywords */}
+        <p className="text-base sm:text-lg text-[#D3CBBC] max-w-2xl font-normal leading-relaxed mb-8">
+          Welcome to <strong className="font-semibold text-cream">Cafe Gokulam (The Gokulam Cafe)</strong> — KPHB Phase 6’s premier open-air courtyard restaurant and cafe. Relish authentic Andhra tandoor starters, signature pulavs, and coastal seafood under open skies.
         </p>
 
         {/* Quick Highlights Bar */}

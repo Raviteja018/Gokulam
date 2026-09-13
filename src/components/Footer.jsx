@@ -85,7 +85,7 @@ export default function Footer() {
             </p>
 
             <p className="text-xs text-[#A39E93] leading-relaxed max-w-sm">
-              An authentic Indian courtyard dining experience in Kukatpally, serving comforting clay-oven starters, aromatic chicken pulao, and Indo-Chinese favourites under open skies.
+              <strong className="text-cream">Cafe Gokulam (The Gokulam Cafe)</strong> — An authentic open-air courtyard restaurant &amp; cafe in KPHB Phase 6, Kukatpally, serving comforting clay-oven starters, aromatic chicken pulao, and fresh coastal seafood under open skies.
             </p>
 
             {/* Google Rating Badge */}
@@ -160,15 +160,17 @@ export default function Footer() {
           {/* Location & Contact Column */}
           <div className="md:col-span-4 space-y-3">
             <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-gold">
-              Visit Gokulam
+              Visit Cafe Gokulam
             </h3>
 
             <address className="not-italic text-xs text-[#D3CBBC] leading-relaxed space-y-1">
-              <p className="font-medium text-cream">
-                240, Kukatpally Housing Board Colony,
+              <p className="font-semibold text-cream">
+                CAFE GOKULAM
               </p>
+              <p>240, Kukatpally Housing Board Colony,</p>
               <p>K P H B Phase 6, Kukatpally,</p>
               <p>Hyderabad, Telangana 500085</p>
+              <p className="text-[11px] text-[#A39E93] pt-0.5 font-mono">Near JNTU Hyderabad • Landmark: KPHB Colony</p>
             </address>
 
             <div className="flex items-center gap-2 pt-2 text-xs text-[#A39E93]">

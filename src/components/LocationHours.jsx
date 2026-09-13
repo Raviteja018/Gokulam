@@ -34,17 +34,17 @@ export default function LocationHours() {
           <div className="inline-flex items-center gap-2 mb-3">
             <div className="w-8 h-[1px] bg-gold" />
             <span className="text-xs font-mono uppercase tracking-[0.25em] text-gold">
-              Visit Gokulam
+              Visit Cafe Gokulam
             </span>
             <div className="w-8 h-[1px] bg-gold" />
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#F7F4EC] tracking-tight mb-4">
-            Find Your Way to <span className="italic gold-gradient-text">Gokulam</span>
+            Find Your Way to <span className="italic gold-gradient-text">Cafe Gokulam</span>
           </h2>
 
           <p className="text-base sm:text-lg text-[#D3CBBC] font-normal leading-relaxed">
-            Conveniently located in the heart of KPHB Phase 6, Kukatpally. Come join us under the stars for an authentic feast.
+            Conveniently situated in the heart of KPHB Phase 6, Kukatpally — just minutes from JNTU Hyderabad and KPHB Colony. Join us in our open-air courtyard for authentic flavours and welcoming vibes.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function LocationHours() {
                     {ADDRESS_LINE_3}
                   </p>
                   <span className="text-xs text-[#A39E93] font-mono mt-1 block">
-                    Landmark: Kukatpally Housing Board Colony
+                    Landmark: Kukatpally Housing Board Colony, Near JNTU
                   </span>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function LocationHours() {
                     12:00 PM – 11:00 PM
                   </p>
                   <span className="text-xs text-[#A39E93] font-mono mt-0.5 block">
-                    Open All 7 Days • Lunch & Dinner
+                    Open All 7 Days • Lunch &amp; Dinner
                   </span>
                 </div>
               </div>
@@ -111,6 +111,31 @@ export default function LocationHours() {
                 <div className="flex items-center gap-2 text-xs text-[#D3CBBC]">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                   <span>Two-Wheeler Parking</span>
+                </div>
+              </div>
+
+              {/* Nearby Landmarks & Local Search Grounding */}
+              <div className="pt-4 border-t border-gold/15">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-gold block mb-2">
+                  Nearby Localities &amp; Access:
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {[
+                    'KPHB Phase 6',
+                    'KPHB Colony',
+                    'Near JNTU Metro',
+                    'Kukatpally',
+                    'Nizampet X Roads',
+                    'Miyapur',
+                    'Hitec City (15m)',
+                  ].map((area) => (
+                    <span
+                      key={area}
+                      className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-[#181C1A] border border-gold/20 text-[#C5BFAA]"
+                    >
+                      {area}
+                    </span>
+                  ))}
                 </div>
               </div>
 
