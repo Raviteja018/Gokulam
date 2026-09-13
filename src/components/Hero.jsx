@@ -58,13 +58,7 @@ export default function Hero() {
 
 
         {/* Editorial Eyebrow Tag for Local SEO & Brand Identity */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#161917]/90 border border-gold/30 backdrop-blur-md mb-4 shadow-sm">
-          <Sparkles className="w-3.5 h-3.5 text-gold" />
-          <span className="text-xs font-mono uppercase tracking-[0.22em] text-gold font-semibold">
-            CAFE GOKULAM • KPHB PHASE 6, KUKATPALLY
-          </span>
-          <Sparkles className="w-3.5 h-3.5 text-gold" />
-        </div>
+        
 
         {/* Primary H1 Heading: Explicitly contains 'Cafe Gokulam' */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-[#F7F4EC] mb-4 max-w-4xl leading-tight">
